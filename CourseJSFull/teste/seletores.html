@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores</title>
+    <style>
+        body {
+            color: black;
+            background-image: url(bg.jpg);
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1 id = 'oba'>Iniciando estudos DOM</h1>
+    <p class = 'bora' >Aqui vai o resultado</p>
+    <p name = 'teste' >Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div class = 'msg'>Clique em mim</div>
+    <script>
+        var a = document.getElementById('oba')
+        a.innerHTML = 'Novo Título'
+        
+        var b = document.getElementsByClassName('bora')[0]
+        b.innerHTML = 'novo paragrafo'
+
+        var c = document.getElementsByName('teste')[0]
+        c.innerHTML = 'Corinthians'
+
+        var d = document.getElementsByTagName('div')[0]
+        d.innerText = 'HAHHAHAHAHA'
+
+        var e = document.querySelector('p[name = "teste"]')
+        e.innerText = 'mudei funciona'
+        
+
+        /*var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]
+        window.document.write(p1.innerText)
+        window.document.write(p1.innerHTML)
+        p1.style.color = 'blue'
+        var d = document.getElementById('teste')
+        d.innerText = 'macaco'
+        // corpo.style.background = 'black'
+        var mudaTexto = window.document.getElementsByClassName('msg')[0]
+        mudaTexto.innerText = 'VAMOOOO'
+        var paragrafo = document.getElementsByName('oba')[0]
+        paragrafo.innerText = 'vamoooo'
+        var corpinho = document.body
+        corpinho.style.background = 'red'
+        var titulo = document.querySelector('div.msg')
+        titulo.style.background = 'blue'*/
+
+        
+        
+    </script>
+</body>
+</html>
