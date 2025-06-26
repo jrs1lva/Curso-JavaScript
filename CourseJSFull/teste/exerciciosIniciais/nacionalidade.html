@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,26 +10,48 @@
             background-image: url(bg.2.jpg);
             color: aliceblue;
         }
+        
         h1 {
             font: bold 30pt Arial;
             color: aliceblue;
         }
+
+        div#caixaDeTexto {
+            font: normal 18pt Arial;
+
+        }
+
+        div#nacionalidade {
+            font: normal 18pt Arial;
+        }
+
+
     </style>
 </head>
 <body>
     <h1>Nacionalidade</h1>
+
+    <div id = 'caixaDeTexto'>
     País: <input type="text" name="pais" id="pais">
     <input type="button" value="Verificar" onclick="verificar()">
-    <div id = 'nacionalidade'>
+    </div>
+
+
+    <div id='nacionalidade'>
         
     </div>
     <script>
         function verificar() {
-        var nacao = document.querySelector('input#pais')
-        if (nacao == 'Brasil') {
-        }
+            var origem = document.getElementById('nacionalidade')
+            var nacao = document.querySelector('input#pais')
+            if (nacao.value === 'Brasil') {
+                origem.innerHTML = ('Brasileiro')
+            } else {
+                origem.innerHTML = ('Estrangeiro')
+            }
 
         }
     </script>
 </body>
+
 </html>
