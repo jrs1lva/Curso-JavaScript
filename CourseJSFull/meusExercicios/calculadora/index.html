@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Calculadora</h1>
+    </header>
+    <section>
+        <div>
+            <p>
+                <strong>Operação com dois números</strong>
+            </p>
+            <p>
+                1- <input type="number" name="txtn1" id="txtn1">
+                <label for="txtn1">Número</label>
+            </p>
+            <p>
+                2- <input type="number" name="txtn2" id="txtn2">
+                <label for="txtn2">Número</label>
+            </p>
+            
+            
+        </div>
+        <div>
+            <input type="radio" name="soma" id="soma">
+            <label for="soma">+ Soma</label>
+            <input type="radio" name="subtrai" id="subtrai">
+            <label for="subtrai">- Subtração</label>
+            <input type="radio" name="multiplica" id="multiplica">
+            <label for="multiplica">x Multiplica</label>
+            <input type="radio" name="divide" id="divide">
+            <label for="divide">/ Divisão</label>
+            <input id = 'botao' type="button" value="Operação" onclick="verificar()">
+        </div>
+        <div id = 'res'>
+            <p></p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy;JotaDev</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
