@@ -4,20 +4,18 @@ function verificar() {
     var txtn2 = document.getElementById('txtn2')
     var n2 = Number(txtn2.value)
     var res = document.getElementById('res')
-    var radsoma = document.getElementById('soma')
-    var radsubtrai = document.getElementById('subtrai')
-    var radmult = document.getElementById('multiplica')
-    var raddiv = document.getElementById('divide')
-     if (radsoma.checked) {
+    var radopera = document.getElementsByName('operacao')
+
+     if (radopera[0].checked) {
         var soma = n1 + n2
         res.innerHTML = `${n1} + ${n2} = <strong>${soma}</strong>`
-    } else if (radsubtrai.checked) {
+    } else if (radopera[1].checked) {
         var subtrai = n1 - n2
         res.innerHTML = `${n1} - ${n2} = <strong>${subtrai}</strong>`
-    } else if (radmult.checked) {
+    } else if (radopera[2].checked) {
         var multiplica = n1 * n2
         res.innerHTML = `${n1} x ${n2} = <strong>${multiplica}</strong>`
-    } else if (raddiv.checked) {
+    } else if (radopera[3].checked) {
         if (n2 === 0) {
             res.innerHTML = `<strong>Erro:</strong> Divisão por zero não é permitida.`
         } else {
