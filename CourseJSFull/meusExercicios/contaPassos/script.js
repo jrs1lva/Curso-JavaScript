@@ -1,14 +1,44 @@
 function contar() {
-    var txtnum = document.getElementById('txtnum')
-    var n1 = Number(txtnum.value)
-    var res = document.querySelector('div#res')
+    var txtin = document.getElementById('txtin')
+    var inicio = Number(txtin.value)
+    var txtfim = document.getElementById('txtfim')
+    var fim = Number(txtfim.value)
+    var txtpass = document.getElementById('txtpass')
+    var passo = Number(txtpass.value)
+    var res = document.getElementById('res')
 
-    for (let i = 0; i < n1; i++) {
-        if (i == 0) {
-            res.innerHTML = 'Contando...'
-        } else {
-            res.innerHTML = `Passo ${i}`
+    if (txtin.value.length === 0 || txtfim.value.length === 0 || txtpass.value.length === 0 || passo <= 0 || inicio == fim || inicio + passo > fim) {
+    res.innerHTML = '[ERRO] Reveja os valores digitados e tente novamente.'
+    } else {
+        if (inicio < fim) {
+            for (let i = inicio; i <= fim ; i += passo) {
+                if (i==inicio) {
+                    res.innerHTML = `${i} 👉`
+                }
+                if (i > inicio && i < fim) {
+                    res.innerHTML += ` ${i} 👉`
+                } if (i == fim) {
+                    res.innerHTML += ` ${i}`
+                }
+            }
+            res.innerHTML += '🏁'
+
+            
+        } else if (inicio > fim) {
+            for (let i = inicio; i >= fim ; i -= passo) {
+                if (i==inicio) {
+                    res.innerHTML = `${i} 👉`
+                }
+                if (i < inicio && i > fim) {
+                    res.innerHTML += ` ${i} 👉`
+                } if (i == fim) {
+                    res.innerHTML += ` ${i}`
+                }
+            }
+            res.innerHTML += '🏁'
+
+            
         }
-
+        
     }
 }
