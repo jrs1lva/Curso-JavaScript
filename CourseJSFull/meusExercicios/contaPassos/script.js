@@ -7,7 +7,7 @@ function contar() {
     var passo = Number(txtpass.value)
     var res = document.getElementById('res')
 
-    if (txtin.value.length === 0 || txtfim.value.length === 0 || txtpass.value.length === 0 || passo <= 0 || inicio == fim || inicio + passo > fim) {
+    if (txtin.value.length === 0 || txtfim.value.length === 0 || txtpass.value.length === 0 || passo <= 0 || inicio == fim) {
     res.innerHTML = '[ERRO] Reveja os valores digitados e tente novamente.'
     } else {
         if (inicio < fim) {
