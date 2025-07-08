@@ -27,10 +27,10 @@ function contar() {
         } else if (inicio > fim) {
             for (let i = inicio; i >= fim ; i -= passo) {
                 if (i==inicio) {
-                    res.innerHTML = `${i} 👉`
+                    res.innerHTML = `${i} \u{1F449}` //emoji com código
                 }
                 if (i < inicio && i > fim) {
-                    res.innerHTML += ` ${i} 👉`
+                    res.innerHTML += ` ${i} 👉` // emoji com windowns + . (ponto)
                 } if (i == fim) {
                     res.innerHTML += ` ${i}`
                 }
