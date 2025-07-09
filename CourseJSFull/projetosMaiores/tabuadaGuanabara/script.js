@@ -3,7 +3,10 @@ function tabuada() {
     let num = Number(txtnum.value)
     let tab = document.getElementById('seltab')
 
-    if (txtnum.value.length == 0) {
+    if (txtnum.value.length
+        
+        
+        == 0) {
         window.alert('Digite um valor na caixa de texto')
     } else {
         tab.innerHTML = ''
