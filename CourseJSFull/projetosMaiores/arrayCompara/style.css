@@ -1,7 +1,6 @@
 body {
     background-image: url(imagens/bg.2.jpg);
     font: normal 15pt Arial;
-    text-align: center;
 }
 
 header {
@@ -15,6 +14,10 @@ section {
     width: 500px;
     margin: auto;
     box-shadow: 5px 5px 10px rgb(0, 0, 0);
+}
+
+select#fLista {
+    width: 150px;
 }
 
 footer {

@@ -1,16 +1,28 @@
-function verificar() {
-    let txtnum = document.getElementById('txtnum')
-    let num = Number(txtnum.value)
-    let vet = [num]
-    let select = document.getElementById('info')
+let num = document.getElementById('txtnum')
+let lista = document.getElementById('fLista')
+let res = document.querySelector('div#res')
+let valores = []
 
-    for (let i = 0; i < array.length; i++) {
-        let item = document.createElement('option')
-        item.text = `${num} x ${i} = ${num*i}`
-        item.value = `tab${i}`
-        tab.appendChild(item)
-        
+function isNumero(n) {
+    if(Number(n) >= 1 && Number(n) <= 100) {
+        return true
+    } else {
+        return false
     }
+}
 
+function inLista(n,l) {
+    if(l.indexOf(Number(n)) != -1) {
+        return true
+    } else {
+        return false
+    }
+}
 
+function adicionar() {
+    if (isNumero(num.value) && !inLista(num.value, valores)) {
+        
+    } else {
+        window.alert('Valor inválido ou já encontrado na lista!')
+    }
 }
